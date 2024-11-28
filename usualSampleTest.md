@@ -1,6 +1,6 @@
 
 ```solidity
-function testYieldDistributiondhankOG() public {
+function testYieldDistributionWithSmallDeposits() public {
         uint256 aliceinitialDeposit = 1e13; //alice deposits before the yield starts
         uint256 bobinitialDeposit = 1e8;    //bob is going to deposit after 24hrs when the yield has started
         uint256 yieldAmount = 24000e18;
@@ -42,4 +42,16 @@ function testYieldDistributiondhankOG() public {
         uint256 bobsWithdrawableAmount = usualX.convertToAssets(bobShare);
         console.log("Assets owed to bob",bobsWithdrawableAmount);
     }
+```
+```
+Logs:
+  total supply before Alice's deposit  0
+  total assets before Alice's deposit  0
+  total assets after Alice's deposit  10000000000000
+  shares Alice  10000000000000
+  total supply before bobs's deposit  10000000000000
+  total assets before bobs deposit 24000000010000000000000
+  total assets after bobs deposit  24000000010000100000000
+  shares Bobs  0
+  Assets owed to bob 0
 ```
